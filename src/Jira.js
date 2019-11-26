@@ -20,7 +20,7 @@ export default class Jira {
     this.releaseVersions = [];
     this.ticketPromises = {};
 
-    const { host, username, password} = config.jira.api;
+    const { protocol, host, port, username, password } = config.jira.api;
     let { email, token } = config.jira.api;
 
     if (!token && typeof password !== 'undefined') {
@@ -37,7 +37,8 @@ export default class Jira {
         host,
         username: email,
         password: token,
-        protocol: 'https',
+        protocol: protocol,
+        port: port,
         apiVersion: 2,
         strictSSL: true
       });

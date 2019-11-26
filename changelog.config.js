@@ -7,9 +7,11 @@ module.exports = {
 
     // API
     api: {
+      protocol: 'https',
       // Root host of your JIRA installation without protocol.
       // (i.e 'yourapp.atlassian.net')
       host: undefined,
+      port: undefined,
       // Email address of the user to login with
       email: undefined,
       // Auth token of the user to login with

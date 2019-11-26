@@ -13,7 +13,6 @@ import path from 'path';
  */
 import defaultConfig from './changelog.config.js';
 
-
 /**
  * Name of the local config files.
  * Put this file in the directory where you call the jira-changelog command.
@@ -35,7 +34,6 @@ export function getDefaultConfig() {
  */
 export function readConfigFile(configPath) {
   let localConf = {};
-
   try {
     // Check if file exists
     fs.accessSync(configPath);
